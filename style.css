@@ -1,0 +1,145 @@
+/* تخفي العناصر لما تحتاج */
+.hidden { display: none; }
+
+/* الخلفية الملونة المتحركة */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* تصميم الكروت/البطاقات */
+.card {
+  max-width: 500px;
+  margin: 50px auto;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: #000; /* كل النصوص أسود */
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* العناوين */
+h1, h2 {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* الحروف الصغيرة */
+.small {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* مربعات الباسورد */
+input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+  color: #000; /* نص الباسورد أسود */
+  background: rgba(255,255,255,0.2);
+}
+
+/* الأزرار */
+button {
+  background: #ff6b6b;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #fff; /* نص الأزرار أبيض عشان يبان */
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff8787;
+}
+
+/* الصور */
+img {
+  max-width: 90%;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* الانيميشن للنصوص والصور في الصفحة الثانية */
+.fade, .fade-img {
+    opacity: 0; /* البداية مخفية */
+    transform: translateY(20px); /* حركتها شوية من تحت */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade.show, .fade-img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Popup الرسالة الأخيرة */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.9);
+  color: #000; /* نص أسود */
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* القلوب في صفحة العدّاد */
+#countdownPage .heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  clip-path: polygon(50% 0%, 61% 12%, 75% 12%, 88% 25%, 88% 38%, 75% 50%, 50% 75%, 25% 50%, 12% 38%, 12% 25%, 25% 12%, 39% 12%);
+  animation-name: floatHeart;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+/* العداد داخل صفحة الانتظار */
+#timer .time-box {
+  display: inline-block;
+  min-width: 40px;
+  text-align: center;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000; /* نص أسود */
+}

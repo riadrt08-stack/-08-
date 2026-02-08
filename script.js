@@ -1,5 +1,5 @@
 // التاريخ والوقت النهائي للعدّاد
-const openTime = new Date("2026-02-08 10:02:00").getTime(); // عدل التاريخ والساعة
+const openTime = new Date("2026-02-4 00:00:00").getTime(); // عدل التاريخ والساعة
 
 // دالة تحقق الباسورد
 function check(){
